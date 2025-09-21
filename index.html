@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tropicália — Versão acessível personalizada</title>
+  <meta name="description" content="Pequeno site sobre Tropicália com melhorias de acessibilidade." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 id="site-title">Tropicália</h1>
+      <nav aria-label="Navegação principal">
+        <button id="menuToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+        <ul id="primaryNav" class="menu" hidden>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#artistas">Artistas</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" role="main">
+    <section id="sobre" class="panel" aria-labelledby="sobre-title">
+      <h2 id="sobre-title">O que foi a Tropicália?</h2>
+      <p>
+        Tropicália foi um movimento cultural brasileiro que uniu música, artes plásticas, teatro e crítica social nos anos 1960.
+        Este site demonstra práticas de acessibilidade aplicadas a um conteúdo simples.
+      </p>
+    </section>
+
+    <section id="artistas" class="panel" aria-labelledby="artistas-title">
+      <h2 id="artistas-title">Artistas relacionados</h2>
+      <ul>
+        <li><strong>Caetano Veloso</strong> — compositor e cantor.</li>
+        <li><strong>Gilberto Gil</strong> — músico e ativista cultural.</li>
+        <li><strong>Os Mutantes</strong> — banda que levou inovação sonora ao movimento.</li>
+      </ul>
+      <figure>
+        <img src="img/tropicalia-illustration.svg" alt="Ilustração estilizada de músicos" width="600" height="300">
+        <figcaption>Ilustração conceptual representando o movimento.</figcaption>
+      </figure>
+    </section>
+
+    <section id="recursos" class="panel" aria-labelledby="recursos-title">
+      <h2 id="recursos-title">Recursos de acessibilidade aplicados</h2>
+      <ul>
+        <li>Link de pular conteúdo</li>
+        <li>Menu acessível por teclado com <code>aria-expanded</code></li>
+        <li>Contraste de cores melhorado</li>
+        <li>Textos descritivos e estruturas semânticas</li>
+        <li>Foco visível e ordem de tabulação lógica</li>
+      </ul>
+      <button id="increaseText">Aumentar texto</button>
+      <button id="decreaseText">Diminuir texto</button>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <p>Feito para você — versão personalizada. <a href="README.md">Leia as alterações</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
